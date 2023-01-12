@@ -27,7 +27,7 @@ public class App {
                 case "3":
                     trierContacts();
                     break;
-                case "q", "Q":
+                case "q", "Q":  
                     return;
                 default:
                     System.out.println("Bro this is not an option you dumb or what ?");
@@ -57,7 +57,6 @@ public class App {
                     //
                    System.out.println("Returning to main menu");
                     return;
-
 
                 default:
                     System.out.println("Bro this is not an option you dumb or what ?");
