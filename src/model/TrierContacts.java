@@ -18,7 +18,6 @@ public class TrierContacts {
         menuSort.add("2- Sort by date of birth");
         menuSort.add("3- Sort by email");
         menuSort.add("0- Return to main menu");
-        menuSort.add("q- Quit");
         menuSort.add("===============");
         for(String menusort:menuSort){
             System.out.println(menusort);
