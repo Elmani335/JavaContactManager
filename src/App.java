@@ -26,7 +26,7 @@ public class App {
                     break;
                 case "3":
                     trierContacts();
-
+                    break;
                 case "q", "Q":
                     return;
                 default:
@@ -56,7 +56,7 @@ public class App {
                 case "0":
                     //
                    System.out.println("Returning to main menu");
-
+                   return;
 
                 case "q", "Q":
                     return;
