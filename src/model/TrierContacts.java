@@ -26,18 +26,6 @@ public class TrierContacts {
         for (String menusort : menuSort) {
             System.out.println(menusort);
         }
-        Scanner sc = new Scanner(System.in);
-        int entrée = sc.nextInt();
-
-        if (entrée == 2) {
-            SortContactsDateOfBirth();
-        }
-        if (entrée == 1) {
-            SortContactsName();
-        }
-        if (entrée == 3) {
-            SortContactsEmail();
-        }
     }
 
     // Récuperer la liste de contacts puis la trier par nom et prénom (si ils ont le
