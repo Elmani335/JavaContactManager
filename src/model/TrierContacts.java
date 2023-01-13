@@ -3,6 +3,7 @@ package model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -24,18 +25,6 @@ public class TrierContacts {
         menuSort.add("===============");
         for (String menusort : menuSort) {
             System.out.println(menusort);
-        }
-        Scanner sc = new Scanner(System.in);
-        int entrée = sc.nextInt();
-
-        if (entrée == 2) {
-            SortContactsDateOfBirth();
-        }
-        if (entrée == 1) {
-            SortContactsName();
-        }
-        if (entrée == 3) {
-            SortContactsEmail();
         }
     }
 
@@ -81,8 +70,8 @@ public class TrierContacts {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        System.out.println(" ");
         System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
-        MenuTrieur();
     }
 
     /**
@@ -119,8 +108,9 @@ public class TrierContacts {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        System.out.println(" ");
         System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
-        MenuTrieur();
+
     }
 
     public static void SortContactsEmail() {
@@ -158,8 +148,9 @@ public class TrierContacts {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        System.out.println(" ");
         System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
-        MenuTrieur();
+
     }
 
     private static void extracted(ArrayList<Contact> contacts) {

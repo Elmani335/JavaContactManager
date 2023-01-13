@@ -46,18 +46,15 @@ public class App {
                     TrierContacts.SortContactsName();
                     break;
                 case "2":
-
+                    TrierContacts.SortContactsDateOfBirth();
                     break;
-
                 case "3":
-
+                    TrierContacts.SortContactsEmail();
                     break;
-
                 case "0":
                     //
                    System.out.println("Returning to main menu");
                     return;
-
                 default:
                     System.out.println("Bro this is not an option you dumb or what ?");
                     break;
