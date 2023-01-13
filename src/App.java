@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -70,9 +72,23 @@ public class App {
     }
 
     private static void listerContacts() {
-        ArrayList<Contact> list = new ArrayList<>();// récupérer les contacts avec la méthode lister de la class contact
-        for (Contact contact : list) {
-            System.out.println(contact.getNom() + " " + contact.getPrenom());
+        // code pour lister les contact de contacts.csv avec prenom: nom: date de naissance: email: tel: ajouter un compteur pour afficher le nombre de contacts
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("contacts.csv"));
+            String line;
+            int compteur = 0;
+            while ((line = br.readLine()) != null) {
+                String[] contact = line.split(";");
+                System.out.println("Name: " + contact[1] + " lastname: " + contact[0] + " Birthdate: " + contact[4]
+                        + " Email: " + contact[2] + " Phone: " + contact[3]);
+                compteur++;
+            }
+            System.out.println("Number of contacts: " + compteur);
+            br.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+
         }
     }
 
