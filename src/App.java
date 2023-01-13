@@ -3,10 +3,9 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.ModifierContacts;
 import model.Contact;
 import model.TrierContacts;
-
-
 
 public class App {
 
@@ -27,7 +26,11 @@ public class App {
                 case "3":
                     trierContacts();
                     break;
-                case "q", "Q":  
+                case "4":
+                    ModifierContacts.test();
+                    ;
+                    break;
+                case "q", "Q":
                     return;
                 default:
                     System.out.println("Bro this is not an option you dumb or what ?");
@@ -53,7 +56,7 @@ public class App {
                     break;
                 case "0":
                     //
-                   System.out.println("Returning to main menu");
+                    System.out.println("Returning to main menu");
                     return;
                 default:
                     System.out.println("Bro this is not an option you dumb or what ?");
@@ -119,12 +122,12 @@ public class App {
         menus.add("1- Add a contact");
         menus.add("2- List all contacts");
         menus.add("3- Sort contacts");
+        menus.add("4- Edit Contact");
         menus.add("q- Quit");
         menus.add("===============");
         for (String menu : menus) {
             System.out.println(menu);
         }
     }
-
 
 }
