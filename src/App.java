@@ -8,6 +8,7 @@ import java.util.Scanner;
 import model.ModifierContacts;
 import model.Contact;
 import model.TrierContacts;
+import model.search;
 
 public class App {
 
@@ -30,7 +31,9 @@ public class App {
                     break;
                 case "4":
                     ModifierContacts.test();
-                    ;
+                    break;
+                case "5":
+                    search();
                     break;
                 case "q", "Q":
                     return;
@@ -41,8 +44,7 @@ public class App {
         }
     }
 
-    private static void trierContacts() throws IOException {
-        TrierContacts c = new TrierContacts();
+    private static void trierContacts() throws Exception {
         while (true) {
             TrierContacts.MenuTrieur();
             String choix = _scan.nextLine();
@@ -58,6 +60,39 @@ public class App {
                     TrierContacts.SortContactsEmail();
                     break;
 
+                case "0":
+                    //
+                    System.out.println("Returning to main menu");
+                    return;
+
+                default:
+                    System.out.println("Bro this is not an option you dumb or what ?");
+                    break;
+            }
+        }
+
+    }
+
+    private static void search() throws Exception {
+        while (true) {
+            search.searchmenu();
+            String choix = _scan.nextLine();
+            switch (choix) {
+                case "1":
+
+                    break;
+                case "2":
+
+                    break;
+                case "3":
+
+                    break;
+                case "4":
+
+                    break;
+                case "5":
+
+                    break;
                 case "0":
                     //
                     System.out.println("Returning to main menu");
@@ -93,12 +128,29 @@ public class App {
     }
 
     private static void ajouterContact() throws IOException {
-        Contact c = new Contact();
-        System.out.println("Type last name");
-        c.setNom(_scan.nextLine());
+        //
+            Contact c = new Contact();
+            while (true) {
+                System.out.println("Type last name");
+                String lastName = _scan.nextLine();
+                if (lastName.matches("^[A-Za-z]{3,20}$")) {
+                    c.setNom(lastName);
+                    break;
+                } else {
+                    System.out.println("Invalid last name! Last name should only contain letters");
+                }
+            }
 
-        System.out.println("Type first name");
-        c.setPrenom(_scan.nextLine());
+        while (true) {
+            System.out.println("Type first name");
+            String firstName = _scan.nextLine();
+            if (firstName.matches("^[A-Za-z]{3,20}$")) {
+                c.setPrenom(firstName);
+                break;
+            } else {
+                System.out.println("Invalid first name! First name should only contain letters");
+            }
+        }
 
         while (true) {
             try {
@@ -142,6 +194,7 @@ public class App {
         menus.add("2- List all contacts");
         menus.add("3- Sort contacts");
         menus.add("4- Edit Contact");
+        menus.add("5- Search Contact");
         menus.add("q- Quit");
         menus.add("===============");
         for (String menu : menus) {

@@ -21,7 +21,6 @@ public class TrierContacts {
         menuSort.add("2- Sort by date of birth");
         menuSort.add("3- Sort by email");
         menuSort.add("0- Return to main menu");
-        menuSort.add("q- Quit");
         menuSort.add("===============");
         for (String menusort : menuSort) {
             System.out.println(menusort);
@@ -60,10 +59,10 @@ public class TrierContacts {
             System.out.println("Contacts triés par nom :");
             for (Contact contact : contacts) {
                 System.out.println(contact.getNom()
-                        + "; " + contact.getPrenom()
-                        + "; " + contact.getMail()
-                        + "; " + contact.getTelephone()
-                        + "; " + contact.getDateNaissance());
+                        + " | " + contact.getPrenom()
+                        + " | " + contact.getMail()
+                        + " | " + contact.getTelephone()
+                        + " | " + contact.getDateNaissance());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,7 +70,7 @@ public class TrierContacts {
             e.printStackTrace();
         }
         System.out.println(" ");
-        System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
+        //System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
 
     }
 
@@ -101,8 +100,8 @@ public class TrierContacts {
             // Affichage trié par date de naissance
             System.out.println("Contacts triés par date de naissance :");
             for (Contact contact : contacts) {
-                System.out.println("Nom : " + contact.getNom() + ", Prénom : " + contact.getPrenom() +
-                        " Date de naissance : " + contact.getDateNaissance());
+                System.out.println("Nom : " + contact.getNom() + " | Prénom : " + contact.getPrenom() +
+                        " | Date de naissance : " + contact.getDateNaissance());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -110,7 +109,7 @@ public class TrierContacts {
             e.printStackTrace();
         }
         System.out.println(" ");
-        System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
+        //System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
 
     }
 
@@ -139,10 +138,10 @@ public class TrierContacts {
             System.out.println("Contacts triés par email :");
             for (Contact contact : contacts) {
                 System.out.println(contact.getNom()
-                        + "; " + contact.getPrenom()
-                        + "; " + contact.getMail()
-                        + "; " + contact.getTelephone()
-                        + "; " + contact.getDateNaissance());
+                        + " | " + contact.getPrenom()
+                        + " | " + contact.getMail()
+                        + " | " + contact.getTelephone()
+                        + " | " + contact.getDateNaissance());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -150,7 +149,7 @@ public class TrierContacts {
             e.printStackTrace();
         }
         System.out.println(" ");
-        System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
+        //System.out.println("Choisissez une option disponible dans le menu suivant petit malin :");
 
     }
 
